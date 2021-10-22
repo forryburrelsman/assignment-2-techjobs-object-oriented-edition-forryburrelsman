@@ -35,7 +35,7 @@ public class CoreCompetency {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(CoreCompetency.this);
     }
 
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but

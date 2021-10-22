@@ -38,7 +38,7 @@ public class Location {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(Location.this);
     }
 
     // Getters and Setters:

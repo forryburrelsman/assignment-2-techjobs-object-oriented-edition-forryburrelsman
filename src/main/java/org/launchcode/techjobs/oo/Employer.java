@@ -30,12 +30,12 @@ public class Employer {
         if (this == o) return true;
         if (!(o instanceof Employer)) return false;
         Employer employer = (Employer) o;
-        return getId() == employer.getId();
+        return id == employer.getId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(Employer.this);
     }
 
     // Getters and Setters:
