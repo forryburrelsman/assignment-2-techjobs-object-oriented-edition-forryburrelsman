@@ -37,6 +37,21 @@ public class Job {
 
     @Override
     public String toString() {
+        if (this.getName() == ""){
+            name = "Data not available!";
+        }
+        if (this.getEmployer() == null){
+            employer = new Employer("Data not available!");
+        }
+        if (this.getLocation() == null){
+            location = new Location("Data not available!");
+        }
+        if (this.getPositionType() == null){
+            positionType = new PositionType("Data not available!");
+        }
+        if (this.getCoreCompetency() == null){
+            coreCompetency = new CoreCompetency("Data not available!");
+        }
         return "\n"  + "ID: "+ this.getId()+"\n" +
                         "Name: "+ this.getName()+"\n"+
                         "Employer: "+ this.getEmployer()+"\n"+
@@ -44,6 +59,7 @@ public class Job {
                         "Position Type: " +this.getPositionType()+ "\n"+
                         "Core Competency: " + this.getCoreCompetency() + "\n";
     }
+
 
     @Override
     public boolean equals(Object o) {
