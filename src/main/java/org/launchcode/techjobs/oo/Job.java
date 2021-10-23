@@ -48,12 +48,12 @@ public class Job {
 
         Job job = (Job) o;
 
-        return getId() == job.id;
+        return id == job.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(Job.this);
+        return Objects.hash(id);
     }
 
 

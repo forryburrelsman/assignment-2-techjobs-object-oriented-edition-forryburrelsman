@@ -1,12 +1,10 @@
 package org.launchcode.techjobs.oo.test;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.launchcode.techjobs.oo.*;
 
-import static jdk.nashorn.internal.objects.NativeArray.lastIndexOf;
 import static org.junit.Assert.*;
 
 /**
@@ -53,10 +51,7 @@ public class JobTest {
         Job job5 = new Job("Stay at Home Dad", new Employer("Cats"), new Location("Home"),
                 new PositionType("Remote"), new CoreCompetency("Extra Skilled"));
         assertEquals(0, job5.toString().indexOf("\n"));
-        char lastChar;
-        //String stringLength = job5.toString().length
-        //lastChar = job5.toString().charAt(job5.toString().length());
         assertEquals(job5.toString().lastIndexOf("\n"), job5.toString().length()-1);
-        //assertEquals(job5.toString().lastIndexOf("\n"), job5.toString().length()-1, .001);
+
     }
 }
