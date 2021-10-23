@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo.test;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -17,7 +18,8 @@ public class JobTest {
     public void testSettingJobId() {
         Job job1 = new Job();
         Job job2 = new Job();
-        assertNotEquals("Ids should not be equal", job1.getId(), job2.getId());
+        assertFalse(job1.getId() == job2.getId());
+        //assertNotEquals("Ids should not be equal", job1.getId(), job2.getId());
     }
 
     @Test
@@ -42,16 +44,18 @@ public class JobTest {
                 new PositionType("Remote"), new CoreCompetency("Extra Skilled"));
         Job job4 = new Job("Stay at Home Dad", new Employer("Cats"), new Location("Home"),
                 new PositionType("Remote"), new CoreCompetency("Extra Skilled"));
-
-        assertNotEquals(job3, job4);
+        assertFalse(job3.equals(job4));
+        //assertNotEquals(job3, job4);
     }
 
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
         Job job5 = new Job("Stay at Home Dad", new Employer("Cats"), new Location("Home"),
                 new PositionType("Remote"), new CoreCompetency("Extra Skilled"));
-        assertEquals(0, job5.toString().indexOf("\n"));
-        assertEquals(job5.toString().lastIndexOf("\n"), job5.toString().length()-1);
+        assertEquals('\n', job5.toString().charAt(0));
+        assertEquals('\n', job5.toString().charAt(job5.toString().length()-1));
+        //assertEquals(0, job5.toString().indexOf("\n"));
+//        assertEquals(job5.toString().lastIndexOf("\n"), job5.toString().length()-1);
 
     }
 
@@ -72,7 +76,7 @@ public class JobTest {
         Job job8 = new Job("", new Employer("Hot Topic"), new Location("The Mall"),
                 new PositionType("Full Time"), new CoreCompetency("Service Experience"));
         assertEquals("\nID: 3\n" +
-                "Name: Data not available!\n" +
+                "Name: Data not available\n" +
                 "Employer: Hot Topic\n" +
                 "Location: The Mall\n" +
                 "Position Type: Full Time\n" +

@@ -38,19 +38,22 @@ public class Job {
     @Override
     public String toString() {
         if (this.getName() == ""){
-            name = "Data not available!";
+            name = "Data not available";
         }
-        if (this.getEmployer() == null){
-            employer = new Employer("Data not available!");
+        if (this.getEmployer().equals("") || this.getEmployer() == null){
+            employer = new Employer("Data not available");
         }
-        if (this.getLocation() == null){
-            location = new Location("Data not available!");
+        if (this.getLocation().equals("")|| this.getLocation()==null){
+            //this.setPositionType(new PositionType("Data not available!"));
+            location = new Location("Data not available");
         }
-        if (this.getPositionType() == null){
-            positionType = new PositionType("Data not available!");
+        if (this.getPositionType().equals("")||this.getPositionType()==null){
+            //positionType = new PositionType("Data not available!");
+            positionType = new PositionType("Data not available");
         }
-        if (this.getCoreCompetency() == null){
-            coreCompetency = new CoreCompetency("Data not available!");
+        if (this.getCoreCompetency().equals("") || this.getCoreCompetency()==null){
+            //this.setCoreCompetency(new CoreCompetency("Data not available!"));
+            coreCompetency = new CoreCompetency("Data not available");
         }
         return "\n"  + "ID: "+ this.getId()+"\n" +
                         "Name: "+ this.getName()+"\n"+
