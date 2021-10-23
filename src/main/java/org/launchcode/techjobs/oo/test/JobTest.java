@@ -54,4 +54,18 @@ public class JobTest {
         assertEquals(job5.toString().lastIndexOf("\n"), job5.toString().length()-1);
 
     }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData(){
+        Job job6 = new Job("Sales", new Employer("Knife Co."), new Location("Travel"),
+                new PositionType("Entry"), new CoreCompetency("People Person"));
+        assertEquals(job6.toString(), "\nID: 3\n" +
+                "Name: Sales\n" +
+                "Employer: Knife Co.\n" +
+                "Location: Travel\n" +
+                "Position Type: Entry\n" +
+                "Core Competency: People Person\n");
+    }
+
+
 }
