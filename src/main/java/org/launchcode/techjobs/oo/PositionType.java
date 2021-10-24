@@ -6,19 +6,19 @@ public class PositionType extends JobField {
         super(value);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        PositionType positionType = (PositionType) o;
-
-        return id == positionType.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return id;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        PositionType positionType = (PositionType) o;
+//
+//        return id == positionType.id;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return id;
+//    }
 
 }

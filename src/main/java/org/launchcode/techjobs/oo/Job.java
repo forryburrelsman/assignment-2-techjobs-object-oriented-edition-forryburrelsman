@@ -40,27 +40,27 @@ public class Job {
         if (this.getName() == ""){
             name = "Data not available";
         }
-        if (this.getEmployer().equals("") || this.getEmployer() == null){
-            employer = new Employer("Data not available");
+        if (employer.getValue().equals("") || employer.getValue() == null){
+            employer.setValue("Data not available");
         }
-        if (this.getLocation().equals("")|| this.getLocation()==null){
+        if (location.getValue().equals("")|| location.getValue()==null){
             //this.setPositionType(new PositionType("Data not available!"));
-            location = new Location("Data not available");
+            location.setValue("Data not available");
         }
-        if (this.getPositionType().equals("")||this.getPositionType()==null){
+        if (positionType.getValue().equals("")||positionType.getValue()==null){
             //positionType = new PositionType("Data not available!");
-            positionType = new PositionType("Data not available");
+            positionType.setValue("Data not available");
         }
-        if (this.getCoreCompetency().equals("") || this.getCoreCompetency()==null){
+        if (coreCompetency.getValue().equals("") || coreCompetency.getValue()==null){
             //this.setCoreCompetency(new CoreCompetency("Data not available!"));
-            coreCompetency = new CoreCompetency("Data not available");
+            coreCompetency.setValue("Data not available");
         }
         return "\n"  + "ID: "+ this.getId()+"\n" +
-                        "Name: "+ this.getName()+"\n"+
-                        "Employer: "+ this.getEmployer()+"\n"+
-                        "Location: "+ this.getLocation()+ "\n"+
-                        "Position Type: " +this.getPositionType()+ "\n"+
-                        "Core Competency: " + this.getCoreCompetency() + "\n";
+                        "Name: "+ name +"\n"+
+                        "Employer: "+ employer +"\n"+
+                        "Location: "+ location + "\n"+
+                        "Position Type: " + positionType + "\n"+
+                        "Core Competency: " + coreCompetency + "\n";
     }
 
 
